@@ -6,6 +6,7 @@ categories: jekyll update
 ---
 
 # Docker란?
+![image](https://user-images.githubusercontent.com/66704969/120499105-c1776600-c3fa-11eb-9465-621e9e539459.png)
 > Docker : 리눅스 컨테이너를 기반으로 하여 특정한 서비스를 패키징하고 배포하는데 유용한 오픈소스 프로그램
 
 > WebHook : 엔드포인트에서 발생한 이벤트가 우리의 앱에 수신되는 형태
