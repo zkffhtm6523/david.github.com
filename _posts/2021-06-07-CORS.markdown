@@ -45,24 +45,22 @@ Origin == Access-Control-Allow-Origin
 
 ### 6. CORS 종류
 >1. Preflight Request  
->2. Credential Request
->3. Non-Credential Request
+>2. Simple Request
+>3. Credential Request
 
 
 #### 6-1 Preflight Request
 >![image](https://user-images.githubusercontent.com/66704969/121037855-c5d0c400-c7ea-11eb-8797-c0fba5c0b1b2.png)
 ![image](https://user-images.githubusercontent.com/66704969/121038144-02042480-c7eb-11eb-8341-7fbd5e6ee3e0.png)
 
-#### 6-2 Credential Request
-#### 6-3 Non-Credential Request
+#### 6-2 Simple Request
+>![image](https://user-images.githubusercontent.com/66704969/121040010-8905cc80-c7ec-11eb-9840-20e356730d64.png)
+![image](https://user-images.githubusercontent.com/66704969/121040157-a5a20480-c7ec-11eb-884e-e6c695e5887a.png)
 
+#### 6-3 Credential Request
+>![image](https://user-images.githubusercontent.com/66704969/121040258-b8b4d480-c7ec-11eb-87db-ec001e28b81f.png)
+![image](https://user-images.githubusercontent.com/66704969/121040402-d4b87600-c7ec-11eb-8ede-4daff4bf314b.png)
+![image](https://user-images.githubusercontent.com/66704969/121040501-e9950980-c7ec-11eb-828c-fc31b658466f.png)
 
-6. 결론
-
-> Pooling : 우리의 앱에서 엔드포인트에 이벤트가 발생했는지 주기적으로 요청을 보내는 방식이라 비효율적
-
-> WebHook : 엔드포인트에서 발생한 이벤트가 우리의 앱에 수신되는 형태
-
-
-
-
+### 7. 결론
+> **Front 개발환경을 위해 응답 헤더에 올바른 Access-Control-Allow-Origin이 내려올 수 있도록 세팅 필요**
