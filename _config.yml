@@ -8,7 +8,7 @@ theme: jekyll-theme-chirpy
 baseurl: ''
 
 # the HTML language tag › https://www.w3.org/International/questions/qa-choosing-language-tags
-lang: ko
+lang: en-US
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: Asia/Seoul
@@ -24,19 +24,23 @@ description: >-                        # used by seo meta and the atom feed
   bootstrap Jekyll theme with responsive web design
   and focuses on text presentation.
 
-# fill in the protocol & hostname for your site, e.g., 'https://zkffhtm6523.github.io'
+# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://zkffhtm6523.github.io'
 
 github:
   username: zkffhtm6523             # change to your github username
 
+twitter:
+  username: twitter_username            # change to your twitter username
+
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: David
-  email: zkffhtm6523@gmail.com             # change to your email address
+  name: your_full_name
+  email: example@doamin.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
+    - https://twitter.com/username      # change to your twitter homepage
     - https://github.com/username       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
