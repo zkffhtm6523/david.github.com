@@ -51,10 +51,11 @@ layout: page
         <span class="text-muted small font-weight-light">
           {% if sub_categories_size > 0 %}
             {{ sub_categories_size }}
-            {% if sub_categories_size > 1 %}categories{% else %}category{% endif %},
+            <b>카테고리</b>,
           {% endif %}
-            {{ top_posts_size }}
-            post{% if top_posts_size > 1 %}s{% endif %}
+            <b>총</b>
+            {% assign new_var = top_posts_size | append: '<b>개의 글</b>' %}
+            {{ new_var }}
         </span>
       </span>
 
@@ -83,8 +84,9 @@ layout: page
           <a href="{{ site.baseurl }}/categories/{{ sub_category | slugify | url_encode }}/"
             class="ml-1 mr-2">{{ sub_category }}</a>
           {% assign posts_size = site.categories[sub_category] | size %}
-          <span class="text-muted small font-weight-light">{{ posts_size }}
-            post{% if posts_size > 1 %}s{% endif %}
+          <span class="text-muted small font-weight-light">
+            {{ posts_size }}
+            <b>개의 글</b>
           </span>
         </li>
         {% endfor %}

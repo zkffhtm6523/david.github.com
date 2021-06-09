@@ -3,26 +3,19 @@
 -->
 
 {% if page.layout == 'home' or page.layout == 'post' %}
-  {% if site.google_analytics.pv.proxy_endpoint or site.google_analytics.pv.cache_path %}
+  {% if site.google_analytics.pv.enabled %}
     <!-- pv-report needs countup.js -->
     <script async src="https://cdn.jsdelivr.net/npm/countup.js@1.9.3/dist/countUp.min.js"></script>
     <script async src="{{ '/assets/js/dist/pvreport.min.js' | relative_url }}"></script>
   {% endif %}
 {% endif %}
 
-{% if page.layout == 'post' or page.layout == 'page' %}
-  <!-- image lazy-loading & popup -->
-  <script async
-    src="https://cdn.jsdelivr.net/combine/npm/lozad/dist/lozad.min.js,npm/magnific-popup@1/dist/jquery.magnific-popup.min.js"></script>
-{% endif %}
-
 {% if page.layout == 'home'
-    or page.layout == 'categories'
     or page.layout == 'post'
-    or page.layout == 'page' %}
+    or page.layout == 'categories' %}
   {% assign type = page.layout %}
 {% else %}
-  {% assign type = "commons" %}
+  {% assign type = "page" %}
 {% endif %}
 
 {% assign js = type | prepend: '/assets/js/dist/' | append: '.min.js' %}
@@ -30,24 +23,35 @@
 
 {% if page.math %}
   <!-- MathJax -->
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
+
+{% if page.viewer %}
+  <!-- ViewerJS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.9.0/viewer.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.9.0/viewer.min.js"></script>
   <script>
-  /* see: <https://docs.mathjax.org/en/latest/options/input/tex.html#tex-options> */
-  MathJax = {
-    tex: {
-      inlineMath: [              /* start/end delimiter pairs for in-line math */
-        ['$','$'],
-        ['\\(','\\)']
-      ],
-      displayMath: [             /* start/end delimiter pairs for display math */
-        ['$$', '$$'],
-        ['\\[', '\\]']
-      ]
-    }
-  };
-  </script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    let isLoaded = new MutationObserver(function (mutations, me) {
+      let contentElement = document.getElementById('post-wrapper');
+      if (contentElement) {
+        let viewer = new Viewer(contentElement, {
+          focus: false, fullscreen: false, keyboard: false, loop: false, navbar : false, rotateable: false, slideOnTouch: false,
+          toolbar : false, tooltip: false, transition: false,
+          title : () => { return document.querySelector('meta[property="og:title"]').content; },
+          view(event) {
+            event.detail.image.title = event.detail.originalImage.title;
+          }
+        });
+        me.disconnect();
+        return;
+      }
+    });
+
+    isLoaded.observe(document, {
+      childList: true,
+      subtree: true
+    });
   </script>
 {% endif %}
 

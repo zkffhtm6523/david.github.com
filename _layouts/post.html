@@ -14,18 +14,19 @@ layout: default
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
         <div>
-          <span class="semi-bold">
-            {{ page.author | default: site.social.name }}
+          {% include timeago.html date=page.date tooltip=true %}
+          by
+          <span class="author">
+            {{ page.author | default: site.author }}
           </span>
-          {% include timeago.html date=page.date prep="on" tooltip=true %}
         </div>
 
         <div>
           <!-- lastmod -->
           {% if page.last_modified_at %}
           <span>
-            {% include timeago.html date=page.last_modified_at
-              class="lastmod" prefix="Updated" tooltip=true %}
+            Updated
+            {% include timeago.html date=page.last_modified_at class="lastmod" tooltip=true %}
           </span>
           {% endif %}
 
@@ -33,7 +34,7 @@ layout: default
           {% include read-time.html content=content %}
 
           <!-- page views -->
-          {% if site.google_analytics.pv.proxy_endpoint or site.google_analytics.pv.cache_path %}
+          {% if site.google_analytics.pv.enabled %}
           <span id="pv" class="pageviews"><i class="fas fa-spinner fa-spin fa-fw"></i></span>
           {% endif %}
 
@@ -44,7 +45,7 @@ layout: default
       <div class="post-content">
 
         {% if page.image.src %}
-          <img src="{{ page.image.src }}" class="preview-img" alt="{{ page.image.alt | default: "Preview Image" }}">
+          <img src="{{ page.image.src }}" class="preview-img" alt="{{ page.image.alt | default: "미리보기" }}">
         {% endif %}
 
         {{ content }}
@@ -81,9 +82,9 @@ layout: default
           d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
           {% if site.data.rights.license %}
           <div class="license-wrapper">
-            This post is licensed under
+            저자는 이 저작물에 대해
             <a href="{{ site.data.rights.license.link }}">{{ site.data.rights.license.name }}</a>
-            by the author.
+            라이선스를 가집니다.
           </div>
           {% endif %}
 
