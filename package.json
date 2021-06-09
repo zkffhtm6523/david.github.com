@@ -13,11 +13,6 @@
     "type": "git",
     "url": "git+https://github.com/cotes2020/jekyll-theme-chirpy.git"
   },
-  "author": "Cotes Chung",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cotes2020/jekyll-theme-chirpy/issues"
-  },
   "homepage": "https://github.com/cotes2020/jekyll-theme-chirpy#readme",
   "dependencies": {
     "gulp": "^4.0.2",
