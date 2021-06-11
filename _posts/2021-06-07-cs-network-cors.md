@@ -7,8 +7,8 @@ math: true
 viewer: true
 tags: [CORS, SOP]
 image:
-  src: /blog-assets/title/Tool_Wide_Img/Network.png?raw=true
-  alt: CORS
+  src: /blog-assets/title/Tool_Wide_Img/Network.jpg?raw=true
+  alt: Network
 ---
 
 # CORS란?

@@ -8,7 +8,7 @@ viewer: true
 tags: [Network]
 image:
   src: /blog-assets/title/Tool_Wide_Img/Network.jpg?raw=true
-  alt: Java
+  alt: Network
 ---
 
 # 웹훅이란?
