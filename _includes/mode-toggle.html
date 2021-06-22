@@ -9,17 +9,15 @@
   class ModeToggle {
     static get MODE_KEY() { return "mode"; }
     static get DARK_MODE() { return "dark"; }
-    static get LIGHT_MODE() { return "light"; }
+    static get LIGHT_MODE() { return "dark"; }
 
     constructor() {
       if (this.hasMode) {
-        // if (this.isDarkMode) {
-        if (false) {
+        if (this.isDarkMode) {
           if (!this.isSysDarkPrefer) {
             this.setDark();
           }
-        }
-         else {
+        } else {
           if (this.isSysDarkPrefer) {
             this.setLight();
           }
@@ -31,14 +29,12 @@
       /* always follow the system prefers */
       this.sysDarkPrefers.addListener(function() {
         if (self.hasMode) {
-          // if (self.isDarkMode) {
-          if (false) {
+          if (self.isDarkMode) {
             if (!self.isSysDarkPrefer) {
               self.setDark();
             }
 
-          }
-           else {
+          } else {
             if (self.isSysDarkPrefer) {
               self.setLight();
             }
