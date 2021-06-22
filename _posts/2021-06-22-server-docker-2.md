@@ -47,6 +47,9 @@ Ctrl+p -> Ctrl+q
 # /bin/bash로 실행되는 것이기에 echo 명령어가 먹는다
 docker exec dff2 echo "hello"
 
+# docker의 실행중인 container의 bash 접속
+docker exec -it d09f bash
+
 # docker container 변경 내역 확인
 docker diff "container ID"
 ```
