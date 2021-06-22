@@ -1,5 +1,5 @@
 ---
-title:  "Docker"
+title:  "Docker 개념"
 author: David
 date:   2021-06-02 22:10:29 +0900
 categories: [Server, Docker]
