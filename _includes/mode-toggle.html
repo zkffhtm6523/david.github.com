@@ -13,7 +13,8 @@
 
     constructor() {
       if (this.hasMode) {
-        if (this.isDarkMode) {
+        // if (this.isDarkMode) {
+          if (true) {
           if (!this.isSysDarkPrefer) {
             this.setDark();
           }
@@ -29,7 +30,8 @@
       /* always follow the system prefers */
       this.sysDarkPrefers.addListener(function() {
         if (self.hasMode) {
-          if (self.isDarkMode) {
+          // if (self.isDarkMode) {
+          if (true) {
             if (!self.isSysDarkPrefer) {
               self.setDark();
             }
