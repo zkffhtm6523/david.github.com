@@ -77,3 +77,9 @@ public class AsyncService {
 2. CompletableFuture
 3. ListenableFuture
 4. Future
+
+
+### @Async 참조 링크
+1. [Return Type](https://opentutorials.org/module/782/6083)
+2. [Configuration 설정](https://www.hanumoka.net/2020/07/02/springBoot-20200702-sringboot-async-service/)
+3. [Simple & Configuration](http://dveamer.github.io/java/SpringAsync.html)
