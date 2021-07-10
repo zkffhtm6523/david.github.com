@@ -1,7 +1,7 @@
 ---
-title:  "[Javascrpit] 유효성 검사"
+title: "[Javascrpit] 유효성 검사"
 author: David
-date:   2021-01-17 23:10:29 +0900
+date: 2021-01-17 23:10:29 +0900
 categories: [Front, Javascript]
 math: true
 viewer: true
