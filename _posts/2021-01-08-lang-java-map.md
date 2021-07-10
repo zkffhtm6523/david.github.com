@@ -1,7 +1,7 @@
 ---
-title:  "[Java]자료구조(Map)"
+title: Java_자료구조(Map)
 author: David
-date:   2021-01-08 23:10:29 +0900
+date: 2021-01-08 23:10:29 +0900
 categories: [Programming, Java]
 math: true
 viewer: true
