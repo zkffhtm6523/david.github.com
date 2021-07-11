@@ -17,34 +17,29 @@ image:
 ## 2. 예시
 
  
-```sql
+```xml
 //사용 전
 
-<select id ="list" parameterType="int" resultType="board.test.testDto>
+<select id ="list" parameterType="int" resultType="board.test.testDto">
 
-select *
-
-from employees
-
-where salary > 100
+SELECT
+  *
+FROM
+  employees
+where
+  salary > 100
 
 </select>
-```
-```sql
+
 //사용 후
 
-<select id = "list" parameterType="int" resultType="board.test.testDto>
+<select id = "list" parameterType="int" resultType="board.test.testDto">
 
-<![CDATA[
-
-select *
-
-from employees
-
-where salary > 100
-
-]]>
-
+SELECT
+  *
+FROM
+  employees
+where
+  salary <![CDATA[ > ]]> 100
 </select> 
-
 ```
