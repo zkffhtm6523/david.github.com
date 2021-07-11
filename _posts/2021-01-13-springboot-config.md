@@ -30,7 +30,7 @@ image:
 ![images](https://images.velog.io/images/zkffhtm6523/post/1e6f10f5-06d5-49d8-8d73-9319377b4578/image.png)
 
 ```
-<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+DispatcherServlet Context: defines this servlet's request-processing infrastructure
 ```
 
 위와 같은 주석이 있는데, **DispatcherServlet과 관련된 설정**을 해야함을 알 수 있습니다.
