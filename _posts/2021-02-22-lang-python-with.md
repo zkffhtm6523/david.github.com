@@ -1,5 +1,5 @@
 ---
-title: [Python] With문 이해하기
+title: '[Python] With문 이해하기'
 author: David
 date: 2021-02-22 23:10:29 +0900
 categories: [Programming, Python]
