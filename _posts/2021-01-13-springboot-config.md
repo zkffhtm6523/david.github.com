@@ -15,6 +15,7 @@ image:
 ![images](https://media.vlpt.us/images/zkffhtm6523/post/e0b2bd9c-bc1d-45d5-a751-ae2bfd3e9e12/image.png)
 
 ## 1. servlet-contex.xml
+
 | servlet-contex.xml |
 | - |
 | <center>WEB Application 에서 client 요청을 받기 위한 설정 <center>|
