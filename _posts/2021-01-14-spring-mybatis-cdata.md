@@ -1,5 +1,5 @@
 ---
-title: '<!cdata[ 사용이유'
+title: "<!cdata[ 사용이유"
 author: David
 date: 2021-01-14 23:10:29 +0900
 categories: [Mybatis, cdata]
@@ -20,7 +20,7 @@ image:
 ```xml
 //사용 전
 
-<select id ="list" parameterType="int" resultType="board.test.testDto">
+select id ="list" parameterType="int" resultType="board.test.testDto"
 
 SELECT
   *
@@ -29,11 +29,11 @@ FROM
 where
   salary > 100
 
-</select>
+/select
 
 //사용 후
 
-<select id = "list" parameterType="int" resultType="board.test.testDto">
+select id = "list" parameterType="int" resultType="board.test.testDto"
 
 SELECT
   *
@@ -41,5 +41,5 @@ FROM
   employees
 where
   salary <![CDATA[ > ]]> 100
-</select> 
+/select 
 ```
