@@ -1,5 +1,5 @@
 ---
-title: [Python] Pass, Continue, Break
+title: '[Python] Pass, Continue, Break'
 author: David
 date: 2021-03-12 23:10:29 +0900
 categories: [Programming, Python]
