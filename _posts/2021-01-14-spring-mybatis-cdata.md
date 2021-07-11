@@ -1,5 +1,5 @@
 ---
-title: '<!cdata[' 사용이유
+title: '<!cdata[ 사용이유'
 author: David
 date: 2021-01-14 23:10:29 +0900
 categories: [Mybatis, cdata]
