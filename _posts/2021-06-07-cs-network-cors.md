@@ -22,11 +22,11 @@ Javascript에서 **console.log(location.origin)** 입력하면 출처가 출력
 >**SOP(Same-Origin Policy)** : 동일 출처 정책  
 
 ### 3. CORS VS SOP
-> https://taggle.kr
-> https://taggle.kr/bookmark (O)
-> https://taggle.kr:443/bookmarks?page=1 (O)
-> http://taggle.kr (X)
-> https://api.taggle.kr (X)
+> https://taggle.kr 
+> https://taggle.kr/bookmark (O) 
+> https://taggle.kr:443/bookmarks?page=1 (O) 
+> http://taggle.kr (X) 
+> https://api.taggle.kr (X) 
 > https://taggle.kr:8080 (O & X)_IE만 다르게 취급함    
 
 ### 4. CORS & SOP가 나오게 된 이유
