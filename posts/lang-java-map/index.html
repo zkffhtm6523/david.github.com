@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="ko-KR" mode="dark" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="pv-cache-enabled" content="false"><meta name="generator" content="Jekyll v4.2.0" /><meta property="og:title" content="Java_자료구조(Map)" /><meta name="author" content="David" /><meta property="og:locale" content="ko_KR" /><meta name="description" content="Javascript 유효성 검사" /><meta property="og:description" content="Javascript 유효성 검사" /><link rel="canonical" href="https://zkffhtm6523.github.io/posts/lang-java-map/" /><meta property="og:url" content="https://zkffhtm6523.github.io/posts/lang-java-map/" /><meta property="og:site_name" content="David의 Blog" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2021-01-08T23:10:29+09:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Java_자료구조(Map)" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"author":{"@type":"Person","name":"David"},"headline":"Java_자료구조(Map)","dateModified":"2021-07-10T18:37:54+09:00","datePublished":"2021-01-08T23:10:29+09:00","description":"Javascript 유효성 검사","url":"https://zkffhtm6523.github.io/posts/lang-java-map/","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zkffhtm6523.github.io/posts/lang-java-map/"},"@context":"https://schema.org"}</script><title>Java_자료구조(Map) | David의 Blog</title><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon.png"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon-precomposed.png"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicons/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/manifest.json"><meta name='msapplication-config' content='/assets/img/favicons/browserconfig.xml'><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/assets/img/favicons/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="cdn.jsdelivr.net"><link rel="dns-prefetch" href="cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script defer src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.9.0/viewer.min.css" /> <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.9.0/viewer.min.js"></script> <script> let isLoaded = new MutationObserver(function (mutations, me) { let contentElement = document.getElementById('post-wrapper'); if (contentElement) { let viewer = new Viewer(contentElement, { focus: false, fullscreen: false, keyboard: false, loop: false, navbar : false, rotateable: false, slideOnTouch: false, toolbar : false, tooltip: false, transition: false, title : () => { return document.querySelector('meta[property="og:title"]').content; }, view(event) { event.detail.image.title = event.detail.originalImage.title; } }); me.disconnect(); return; } }); isLoaded.observe(document, { childList: true, subtree: true }); </script> <script defer src="/app.js"></script> <script defer src="https://www.googletagmanager.com/gtag/js?id="></script> <script> document.addEventListener("DOMContentLoaded", function(event) { window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', ''); }); </script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column align-items-end"><div class="profile-wrapper text-center"><div id="avatar"> <a href="/" alt="avatar" class="mx-auto"> <img src="https://github.com/zkffhtm6523/zkffhtm6523.github.io/blob/main/blog-assets/66704969.jpg?raw=true" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="site-title mt-3"> <a href="/">David의 Blog</a></div><div class="site-subtitle font-italic">Software Developer</div></div><ul class="w-100"><li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>Home</span> </a><li class="nav-item"> <a href="/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>카테고리</span> </a><li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>태그</span> </a><li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>타임라인</span> </a><li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a></ul><div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center"> <a href="https://github.com/zkffhtm6523" aria-label="github" target="_blank" rel="noopener"> <i class="fab fa-github-alt"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['zkffhtm6523','gmail.com'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" aria-label="rss" > <i class="fas fa-rss"></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> Posts </a> </span> <span>Java_자료구조(Map)</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" placeholder="검색..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>Java_자료구조(Map)</h1><div class="post-meta text-muted d-flex flex-column"><div> <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Fri, Jan 8, 2021, 11:10 PM +0900" > Jan 8 <i class="unloaded">2021-01-08T23:10:29+09:00</i> </span> by <span class="author"> David </span></div><div> <span> Updated <span class="timeago lastmod" data-toggle="tooltip" data-placement="bottom" title="Sat, Jul 10, 2021, 6:37 PM +0900" > Jul 10 <i class="unloaded">2021-07-10T18:37:54+09:00</i> </span> </span> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="718 words">3 min</span></div></div><div class="post-content"> <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://github.com/zkffhtm6523/zkffhtm6523.github.io/blob/main/blog-assets/title/Tool_Wide_Img/java_image.webp?raw=true" class="preview-img" alt="java"><h1 id="javascript-유효성-검사">Javascript 유효성 검사</h1><h3 id="1-map이란">1. Map이란?</h3><blockquote><p>Collection Framework에서 [Key, Value] 형태로 구성</p></blockquote><h3 id="2-map과-json의-유사점">2. Map과 JSON의 유사점</h3><blockquote><p>일반적으로 Javascript에서 사용하는 JSON 구조와 유사함</p></blockquote><ul><li>Json 자료 예시 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://media.vlpt.us/images/zkffhtm6523/post/41b6cf3c-39b4-4a13-917a-3be888b4c769/image.png" alt="image" /></ul><blockquote><p>위의 자료는 Portfolio로 만들었던 웹사이트이다. Server 단에서 View 단으로 데이터를 전달할 때 JSON의 형태로 제공해준다. JSON 형태는 값을 가공하기 편해서 본인은 매우 선호하고 있음</p></blockquote><blockquote><p>‘w_no’는 Key, ‘5248’은 Value</p></blockquote><h3 id="3-map의-조건">3. Map의 조건</h3><blockquote><p>(1) Key값은 중복일 수 없음 (2) Key, Value 중 하나만 존재할 수 없음 (3) Value는 중복 가능</p></blockquote><h3 id="4-map의-예시">4. Map의 예시</h3><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre><td class="rouge-code"><pre><span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">webtoonList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+          <span class="n">webtoonList</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"w_no"</span><span class="o">,</span> <span class="s">"5248"</span><span class="o">);</span>
+          <span class="n">webtoonList</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"w_thumbnail"</span><span class="o">,</span> <span class="s">"https://~~~~"</span><span class="o">);</span>
+          <span class="n">webtoonList</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"w_seq"</span><span class="o">,</span> <span class="s">"3"</span><span class="o">);</span>
+
+<span class="c1">// Map의 제네릭의 타입을 두 개 넣을 수 있다.</span>
+<span class="c1">// Key : String / Value : String 의미</span>
+<span class="c1">// Map&lt;String, Object&gt; 또한 가능하다</span>
+</pre></table></code></div></div><h3 id="5-map의-종류">5. Map의 종류</h3><blockquote><p>Map의 종류는 대표적으로 <strong>HashMap / TreeMap / LinkedHashMap</strong>이 있다.</p></blockquote><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://media.vlpt.us/images/zkffhtm6523/post/8c617ea8-285d-4804-af70-8717eb86ae3c/image.png" alt="images" /></p><blockquote><p><strong>특별한 경우가 없다면, HashMap을 사용하도록 하자</strong></p></blockquote><h3 id="6-map의-사용법">6. Map의 사용법</h3><h4 id="--put--putall">- Put() / PutAll()</h4><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre><td class="rouge-code"><pre><span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">fruits</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+<span class="n">fruits</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"apple"</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+<span class="n">fruits</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"banana"</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span>
+<span class="n">fruits</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"kiwi"</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span>
+<span class="n">fruits</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="kc">null</span><span class="o">,</span> <span class="mi">4</span><span class="o">);</span>
+<span class="n">fruits</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"kiwi"</span><span class="o">,</span> <span class="mi">5</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"fruits: "</span> <span class="o">+</span> <span class="n">fruits</span><span class="o">);</span>
+
+<span class="c1">// fruits: {banana=2, null=4, apple=1, kiwi=5}</span>
+
+<span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">fruits</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+<span class="n">fruits</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"apple"</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+<span class="n">fruits</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"banana"</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span>
+<span class="n">fruits</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"kiwi"</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span>
+
+<span class="c1">//PutAll()</span>
+
+<span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">food</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+<span class="n">food</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"coffee"</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+<span class="n">food</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"hamburger"</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span>
+<span class="n">food</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"sandwich"</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span>
+
+<span class="c1">//food &lt;- fruits로 합치다(fruits에 있는 key/value를 food로 이동)</span>
+<span class="n">food</span><span class="o">.</span><span class="na">putAll</span><span class="o">(</span><span class="n">fruits</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"food: "</span> <span class="o">+</span> <span class="n">food</span><span class="o">);</span>
+
+<span class="c1">// food: {banana=2, apple=1, kiwi=3, coffee=1, sandwich=3, hamburger=2}</span>
+</pre></table></code></div></div><h4 id="--get--remove">- get() / remove()</h4><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre><td class="rouge-code"><pre><span class="c1">//get()</span>
+
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"banana : "</span><span class="o">+</span><span class="n">food</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"banana"</span><span class="o">));</span>
+<span class="c1">//banana : 2</span>
+
+<span class="c1">//remove() : 해당 key값을 삭제하고 value값을 리턴</span>
+
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"banana : "</span><span class="o">+</span><span class="n">food</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="s">"banana"</span><span class="o">));</span>
+<span class="c1">//banana : 2</span>
+</pre></table></code></div></div><h4 id="--containskey--containsvalue">- containsKey() / containsValue()</h4><div class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre><td class="rouge-code"><pre><span class="c1">//containsKey()</span>
+
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"containsKey(apple): "</span> <span class="o">+</span> <span class="n">fruits</span><span class="o">.</span><span class="na">containsKey</span><span class="o">(</span><span class="s">"apple"</span><span class="o">));</span>
+
+<span class="c1">// containsKey(apple): true</span>
+
+<span class="c1">//----------------------------------------------------------------------</span>
+
+<span class="c1">//containsValue()</span>
+
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"containsValue(1): "</span> <span class="o">+</span> <span class="n">fruits</span><span class="o">.</span><span class="na">containsValue</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
+
+<span class="c1">// containsValue(1): true</span>
+
+</pre></table></code></div></div><h4 id="--keyset-values">- keySet(), values()</h4><blockquote><p><strong>keySet()</strong> : Set 객체로 리턴 <strong>values()</strong> : Collection 객체로 리턴 ```java Map&lt;String, Integer&gt; fruits = new HashMap&lt;&gt;(); fruits.put(“apple”, 1); fruits.put(“banana”, 2); fruits.put(“kiwi”, 3);</p></blockquote><p>//keyset()————————————- System.out.println(“keySet(): “ + fruits.keySet()); // keySet(): [banana, apple, kiwi]</p><p>Set<String> keys = fruits.keySet(); //Set 타입으로 Keys 값을 넣어준다</String></p><p>for (String key : keys) { System.out.println(“key: “ + key); } // key: banana // key: apple // key: kiwi</p><p>// values()————————————-</p><p>System.out.println(“values(): “ + fruits.values()); // values(): [2, 1, 3]</p><p>//Collection 타입으로 values 값을 넣어준다 Collection<Integer> values = fruits.values(); for (Integer value : values) { System.out.println("value: " + value); } // value: 2 // value: 1 // value: 3</Integer></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre><td class="rouge-code"><pre>
+#### - replace()
+```java
+//값의 여부와 상관없이 시도함 / 삭제된 value return
+public V replace(K key, V value)
+
+System.out.println("replace(apple, 10): "  + fruits.replace("apple", 10));
+// replace(apple, 10): 1
+System.out.println("replace(undefined, 10): "  + fruits.replace("undefined", 10));
+// replace(undefined, 10): null
+
+
+//값이 일치한다면 시도함 / true or false return
+public boolean replace(K key, V oldValue, V newValue)
+
+System.out.println("replace(apple, 1, 10): "  + fruits.replace("apple", 1, 10));
+// replace(apple, 1, 10): true
+System.out.println("replace(banana, 1, 10): "  + fruits.replace("banana", 1, 20));
+// replace(banana, 1, 10): false
+</pre></table></code></div></div><h3 id="7-참고-사이트">7. 참고 사이트</h3><p>참고 : <a href="https://codechacha.com/ko/java-map-hashmap/">codechacha.com</a></p></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/programming/'>Programming</a>, <a href='/categories/java/'>Java</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/" class="post-tag no-text-decoration" >자료구조</a> <a href="/tags/map/" class="post-tag no-text-decoration" >Map</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> 저자는 이 저작물에 대해 <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.ko">CC BY-NC 4.0</a> 라이선스를 가집니다.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">공유</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=Java_자료구조(Map) - David의 Blog&url=https://zkffhtm6523.github.io/posts/lang-java-map/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=Java_자료구조(Map) - David의 Blog&u=https://zkffhtm6523.github.io/posts/lang-java-map/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=Java_자료구조(Map) - David의 Blog&url=https://zkffhtm6523.github.io/posts/lang-java-map/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>최근 업데이트</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/cs-network-cors/">CORS & SOP</a><li><a href="/posts/spring-mybatis-cdata/">cdata 사용이유</a><li><a href="/posts/springboot-config/">XML 설정 파일 정리</a><li><a href="/posts/lang-js-routie/">[Javascript] Routie</a><li><a href="/posts/lang-python-with/">[Python] With문 이해하기</a></ul></div><div id="access-tags"> <span>인기 태그</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/springboot/">SpringBoot</a> <a class="post-tag" href="/tags/server/">Server</a> <a class="post-tag" href="/tags/docker/">Docker</a> <a class="post-tag" href="/tags/github/">GitHub</a> <a class="post-tag" href="/tags/java/">Java</a> <a class="post-tag" href="/tags/jdk8/">jdk8</a> <a class="post-tag" href="/tags/python/">Python</a> <a class="post-tag" href="/tags/annotation/">Annotation</a> <a class="post-tag" href="/tags/async/">Async</a> <a class="post-tag" href="/tags/cdata/">cdata</a></div></div></div><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script><div id="toc-wrapper" class="pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">목차</span><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>이 블로그 다른 글</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/lang-jdk8-interface/"><div class="card-body"> <span class="timeago small" > May 28 <i class="unloaded">2021-05-28T23:10:29+09:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>JDK8_인터페이스</h3><div class="text-muted small"><p> 1. Comparable 인터페이스 클래스가 자신이 갖고 있는 객체를 정렬할 수 있으려면, Comparable 인터페이스를 구현해야 한다. Comparable 인터페이스는 문자열 대 문자열, 직원 대 직원 등으로 비교해야한다. 따라서 Comparable 인터페이스는 타입 파라미터를 받는다. 1 2 3 public interface Comp...</p></div></div></a></div><div class="card"> <a href="/posts/lang-jdk8-lambda/"><div class="card-body"> <span class="timeago small" > May 28 <i class="unloaded">2021-05-28T23:10:29+09:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>JDK8_Lambda</h3><div class="text-muted small"><p> 람다 표현식은 한 번 이든 여러 번이든 나중에 실행할 수 있게 전달하는 코드 블록이다. 람다 표현식 문법 1 2 3 4 5 6 (String) first, String Second) -&gt; { int difference = first.length() &lt; second.length(); if(difference &lt; 0...</p></div></div></a></div><div class="card"> <a href="/posts/lang-jdk8-sce/"><div class="card-body"> <span class="timeago small" > Jan 11 <i class="unloaded">2021-01-11T23:10:29+09:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Java_단락평가(SCE)</h3><div class="text-muted small"><p> 개념 논리 연산자 &amp;&amp; 혹은   를 포함한 연산 결과 True/False에서 앞의 연산을 통해서 뒤의 연산 결과 전에 판단을 완료하는 것 “나머지 연산을 수행할 필요가 없을 때 사용된다” 2. &amp;&amp; 1 2 3 4 ...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <span class="btn btn-outline-primary disabled" prompt="이전"><p>-</p></span> <a href="/posts/lang-jdk8-sce/" class="btn btn-outline-primary" prompt="다음"><p>Java_단락평가(SCE)</p></a></div><div id="disqus" class="pt-2 pb-2"><p class="text-center text-muted small pb-5"> Loading comments from <a href="https://disqus.com/">Disqus</a> ...</p></div><script src="/assets/js/lib/jquery.disqusloader.min.js"></script> <script> const options = { scriptUrl: '//David.disqus.com/embed.js', disqusConfig: function() { this.page.title = 'Java_자료구조(Map)'; this.page.url = 'https://zkffhtm6523.github.io/posts/lang-java-map/'; this.page.identifier = '/posts/lang-java-map/'; } }; $.disqusLoader('#disqus', options); </script></div></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script> <script type="text/javascript"> const imgs = document.querySelectorAll('.post-content img'); const observer = lozad(imgs); observer.observe(); </script><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2021 <a href="https://github.com/zkffhtm6523">David</a>. <span data-toggle="tooltip" data-placement="top" title="다르게 명시되지 않는 한, 크리에이티브 커먼즈 저작자표시-비영리 4.0 (CC BY-NC 4.0) 국제 라이선스에 따라 저자는 저작물에 대한 라이선스를 가지며, 라이선스에 따라 이용할 수 있습니다.">Some rights reserved.</span></p></div><div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> with <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a> theme.</p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">인기 태그</h4><a class="post-tag" href="/tags/springboot/">SpringBoot</a> <a class="post-tag" href="/tags/server/">Server</a> <a class="post-tag" href="/tags/docker/">Docker</a> <a class="post-tag" href="/tags/github/">GitHub</a> <a class="post-tag" href="/tags/java/">Java</a> <a class="post-tag" href="/tags/jdk8/">jdk8</a> <a class="post-tag" href="/tags/python/">Python</a> <a class="post-tag" href="/tags/annotation/">Annotation</a> <a class="post-tag" href="/tags/async/">Async</a> <a class="post-tag" href="/tags/cdata/">cdata</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="https://zkffhtm6523.github.io{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">입력하신 검색어와 일치하는 결과가 없습니다.</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script>
